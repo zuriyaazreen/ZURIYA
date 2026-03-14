@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ZURIYA AI Fashion Prompt Builder</title>
+<meta charset="UTF-8">
+<title>ZURIYA AI Fashion Prompt Studio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>ZURIYA AI Fashion Prompt Builder</h1>
+<div class="container">
 
-<label>Product</label>
+<h1>ZURIYA AI Fashion Prompt Studio</h1>
+<p>Create professional fashion photoshoot prompts</p>
+
+<div class="card">
+
+<div class="step active" id="step1">
+<h2>Step 1 — Product</h2>
 <select id="product">
-<option>Shoes</option>
+<option>Sneakers</option>
 <option>Handbag</option>
 <option>Watch</option>
 <option>Jewelry</option>
+<option>Perfume</option>
 <option>Clothing</option>
 </select>
 
-<label>Style</label>
+<button onclick="nextStep(2)">Next</button>
+</div>
+
+<div class="step" id="step2">
+<h2>Step 2 — Style</h2>
 <select id="style">
-<option>Luxury Studio</option>
-<option>Fashion Editorial</option>
-<option>Street Fashion</option>
+<option>Luxury studio</option>
+<option>Editorial fashion</option>
+<option>Street fashion</option>
+<option>Ecommerce minimal</option>
+<option>Brand campaign</option>
 </select>
 
-<label>Lighting</label>
+<button onclick="nextStep(3)">Next</button>
+</div>
+
+<div class="step" id="step3">
+<h2>Step 3 — Lighting</h2>
 <select id="lighting">
-<option>Softbox</option>
-<option>Natural Light</option>
-<option>Dramatic Light</option>
+<option>Softbox studio</option>
+<option>Natural daylight</option>
+<option>Golden hour</option>
+<option>Dramatic fashion lighting</option>
 </select>
 
-<button onclick="generate()">Generate JSON Prompt</button>
+<button onclick="nextStep(4)">Next</button>
+</div>
 
-<pre id="result"></pre>
+<div class="step" id="step4">
+<h2>Step 4 — Background</h2>
+<select id="background">
+<option>White minimal studio</option>
+<option>Luxury marble</option>
+<option>Urban street</option>
+<option>Gradient backdrop</option>
+<option>Runway stage</option>
+</select>
+
+<button onclick="generatePrompt()">Generate Prompt</button>
+
+</div>
+
+</div>
+
+<h2>Generated JSON Prompt</h2>
+
+<pre id="output"></pre>
+
+<button onclick="copyPrompt()">Copy Prompt</button>
+
+</div>
 
 <script src="script.js"></script>
 
