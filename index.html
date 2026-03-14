@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZURIYA AI Fashion Prompt Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>ZURIYA AI Fashion Prompt Builder</h1>
+
+<label>Product</label>
+<select id="product">
+<option>Shoes</option>
+<option>Handbag</option>
+<option>Watch</option>
+<option>Jewelry</option>
+<option>Clothing</option>
+</select>
+
+<label>Style</label>
+<select id="style">
+<option>Luxury Studio</option>
+<option>Fashion Editorial</option>
+<option>Street Fashion</option>
+</select>
+
+<label>Lighting</label>
+<select id="lighting">
+<option>Softbox</option>
+<option>Natural Light</option>
+<option>Dramatic Light</option>
+</select>
+
+<button onclick="generate()">Generate JSON Prompt</button>
+
+<pre id="result"></pre>
+
+<script src="script.js"></script>
+
+</body>
+</html>
